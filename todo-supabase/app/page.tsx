@@ -4,9 +4,10 @@ import { TaskFormTable } from "@/components/TaskFormTable";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Suspense } from "react";
+
+export const revalidate = 10;
 export default async function Home() {
   const tasks = (await getTasks()) || [];
-  //TODO : اساتخدام server action
   return (
     <div className="">
       <div className="flex justify-between items-center mb-4 ">
